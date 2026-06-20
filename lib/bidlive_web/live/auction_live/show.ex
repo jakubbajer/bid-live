@@ -39,19 +39,23 @@ defmodule BidliveWeb.AuctionLive.Show do
             <label class="block text-sm font-medium text-amber-700 dark:text-amber-300 mb-1">
               Twoja oferta (do {@max_bid} zł)
             </label>
-            <div class="flex gap-2">
+            <div class="flex flex-col sm:flex-row gap-2">
               <div class="relative flex-1">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-amber-600">zł</span>
                 <.input
                   field={@bid_form[:amount]}
                   type="number"
                   step="0.01"
                   min={@min_bid}
                   max={@max_bid}
-                  class="!text-lg !font-semibold"
+                  class="!pl-10 !text-lg !font-semibold"
                   placeholder={@max_bid}
                 />
               </div>
-              <.button phx-disable-with="Licytowanie..." class="btn btn-primary !text-lg px-8">
+              <.button
+                phx-disable-with="Licytowanie..."
+                class="btn btn-primary !text-lg px-8 w-full sm:w-auto"
+              >
                 Licytuj
               </.button>
             </div>

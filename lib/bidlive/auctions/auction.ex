@@ -19,7 +19,7 @@ defmodule Bidlive.Auctions.Auction do
   def changeset(auction, attrs, user_scope) do
     auction
     |> cast(attrs, [:title, :description, :starting_price, :end_time, :image_url])
-    |> validate_required([:title, :description, :starting_price, :end_time, :image_url])
+    |> validate_required([:title, :description, :starting_price, :end_time])
     |> put_change(:user_id, user_scope.user.id)
     |> put_change(
       :current_price,
@@ -34,7 +34,7 @@ defmodule Bidlive.Auctions.Auction do
   def changeset(auction, attrs) do
     auction
     |> cast(attrs, [:title, :description, :starting_price, :end_time, :image_url])
-    |> validate_required([:title, :description, :starting_price, :end_time, :image_url])
+    |> validate_required([:title, :description, :starting_price, :end_time])
   end
 
   @doc false

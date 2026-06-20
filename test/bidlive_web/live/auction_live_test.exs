@@ -8,22 +8,19 @@ defmodule BidliveWeb.AuctionLiveTest do
     description: "some description",
     title: "some title",
     starting_price: "120.5",
-    end_time: "2026-06-19T20:28:00",
-    image_url: "some image_url"
+    end_time: "2026-06-19T20:28:00"
   }
   @update_attrs %{
     description: "some updated description",
     title: "some updated title",
     starting_price: "456.7",
-    end_time: "2026-06-20T20:28:00",
-    image_url: "some updated image_url"
+    end_time: "2026-06-20T20:28:00"
   }
   @invalid_attrs %{
     description: nil,
     title: nil,
     starting_price: nil,
-    end_time: nil,
-    image_url: nil
+    end_time: nil
   }
 
   setup :register_and_log_in_user

@@ -39,16 +39,16 @@
     </script>
   </head>
   <body>
-    <ul class="menu menu-horizontal w-full relative z-10 flex items-center gap-4 px-4 sm:px-6 lg:px-8 justify-end">
+    <ul class="menu menu-horizontal w-full relative z-10 flex items-center gap-2 sm:gap-4 px-4 sm:px-6 lg:px-8 justify-end text-sm sm:text-base">
       <%= if @current_scope do %>
-        <li>
+        <li class="hidden sm:list-item text-base-content/60 truncate max-w-32">
           {@current_scope.user.email}
         </li>
         <li>
           <.link href={~p"/users/settings"}>Ustawienia</.link>
         </li>
         <li>
-          <.link href={~p"/users/log-out"} method="delete">Wyloguj się</.link>
+          <.link href={~p"/users/log-out"} method="delete">Wyloguj</.link>
         </li>
       <% else %>
         <li>
